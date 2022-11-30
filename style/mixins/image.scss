@@ -1,6 +1,7 @@
 @mixin image($width, $height, $isAvatar) {
   width: $width;
   height: $height;
+  cursor: pointer;
   @content;
 
   @if ($isAvatar) {

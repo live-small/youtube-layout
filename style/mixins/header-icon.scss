@@ -1,6 +1,7 @@
 @mixin header-icon($width: 1.5rem, $height: 1.5rem, $hasHover: true, $radius: null) {
   width: $width;
   height: $height;
+  cursor: pointer;
   @content;
 
   @if ($hasHover) {

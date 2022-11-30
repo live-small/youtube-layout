@@ -26,11 +26,14 @@ body {
 }
 .header .youtube-logo {
   width: 80px;
+  height: auto;
+  cursor: pointer;
   margin-left: 7px;
 }
 .header .header-icon {
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
   padding: 5px;
 }
 .header .header-icon:hover {
@@ -64,6 +67,7 @@ body {
 .header .search-button .search-image {
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
   padding: 0 5px;
 }
 .header .small-size {
@@ -78,6 +82,7 @@ body {
 .header .avatar {
   width: 25px;
   height: 25px;
+  cursor: pointer;
   margin-left: 7px;
   border-radius: 50%;
 }
