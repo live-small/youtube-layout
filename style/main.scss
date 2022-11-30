@@ -1,0 +1,90 @@
+@use 'mixins/header-icon' as icon;
+@use 'mixins/button.scss' as btn;
+@use 'mixins/image.scss' as img;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.header {
+  height: 54px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5px solid gray;
+  justify-content: space-between;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .container:nth-child(2) {
+    width: 40%;
+
+    @media screen and (max-width: 540px) {
+      display: none;
+    }
+  }
+
+  .youtube-logo {
+    width: 80px;
+    margin-left: 7px;
+  }
+
+  .header-icon {
+    @include icon.header-icon($hasHover: true, $radius: 50%) {
+      padding: 5px;
+    }
+  }
+
+  .search-form {
+    display: flex;
+    border-radius: 40px;
+    border: 0.5px solid gray;
+    flex: 1;
+
+    &:focus-within {
+      border: 1px solid blue;
+    }
+
+    .search-input {
+      margin: 7px;
+      border: none;
+      flex: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .search-button {
+    @include btn.button(0 40px 40px 0) {
+      border: none;
+    }
+
+    .search-image {
+      @include icon.header-icon($hasHover: false) {
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .small-size {
+    display: none;
+
+    @media screen and (max-width: 540px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .avatar {
+    @include img.image(25px, 25px, true) {
+      margin-left: 7px;
+    }
+  }
+}

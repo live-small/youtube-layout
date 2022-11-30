@@ -1,0 +1,9 @@
+@mixin image($width, $height, $isAvatar) {
+  width: $width;
+  height: $height;
+  @content;
+
+  @if ($isAvatar) {
+    border-radius: 50%;
+  }
+}

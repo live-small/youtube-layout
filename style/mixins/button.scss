@@ -1,0 +1,8 @@
+@mixin button($radius) {
+  border-radius: $radius;
+  @content;
+
+  &:hover {
+    background-color: lighten(black, 90%);
+  }
+}
