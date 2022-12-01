@@ -171,18 +171,21 @@ body {
 }
 
 .main-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
 
   .tags {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     position: fixed;
     padding: 5px;
     background-color: color.$white;
     margin: 0;
+    width: 84%;
 
     .tag {
       @include icon.header-icon(auto, auto, true, $background-color: color.$lightGray) {
@@ -229,14 +232,14 @@ body {
     }
 
     .asset {
-      position: relative;
+      // position: relative;
       margin-bottom: 10px;
     }
 
     .running-time {
-      position: absolute;
-      right: 12px;
-      bottom: 10px;
+      // position: absolute;
+      // right: 12px;
+      // bottom: 10px;
       background-color: black;
       font-size: 12px;
       padding: 3px;

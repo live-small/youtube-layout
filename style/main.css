@@ -166,18 +166,21 @@ body {
 }
 
 .main-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
 }
 .main-content .tags {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   position: fixed;
   padding: 5px;
   background-color: white;
   margin: 0;
+  width: 84%;
 }
 .main-content .tags .tag {
   width: auto;
@@ -223,13 +226,9 @@ body {
   border-radius: 50%;
 }
 .main-content .video .asset {
-  position: relative;
   margin-bottom: 10px;
 }
 .main-content .video .running-time {
-  position: absolute;
-  right: 12px;
-  bottom: 10px;
   background-color: black;
   font-size: 12px;
   padding: 3px;
