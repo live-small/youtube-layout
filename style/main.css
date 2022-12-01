@@ -151,7 +151,7 @@ body {
   margin: 5px 10px;
   border-radius: 50%;
 }
-.navigation .menu span {
+.navigation .menu .nav-title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -168,7 +168,7 @@ body {
 .main-content {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 100%;
 }
 .main-content .tags {
   display: flex;
@@ -193,16 +193,24 @@ body {
 .main-content .tags .tag:hover {
   background-color: #d3d3d3;
 }
+.main-content .video-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 47px;
+}
 .main-content .video {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  min-width: 120px;
+  flex: 1 1 270px;
+  padding: 5px 16px 30px 16px;
 }
-.main-content .video:hover .icon {
+.main-content .video:hover .content .icon {
   visibility: visible;
 }
 .main-content .video .thumbnail-image {
-  width: auto;
+  width: 100%;
   height: auto;
   cursor: pointer;
   border-radius: 20px;
@@ -211,9 +219,17 @@ body {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  margin-right: 8px;
   border-radius: 50%;
 }
+.main-content .video .asset {
+  position: relative;
+  margin-bottom: 10px;
+}
 .main-content .video .running-time {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
   background-color: black;
   font-size: 12px;
   padding: 3px;
@@ -222,6 +238,7 @@ body {
 }
 .main-content .video .content {
   display: flex;
+  align-items: flex-start;
 }
 .main-content .video .content .icon {
   width: 1.5rem;
@@ -231,12 +248,19 @@ body {
   align-self: flex-start;
 }
 .main-content .video .description {
+  flex: 1;
   display: flex;
   flex-direction: column;
   font-size: 15px;
 }
 .main-content .video .title {
   font-weight: 500;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .main-content .video .channel-name {
   color: gray;
