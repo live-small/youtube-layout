@@ -197,7 +197,12 @@ body {
   padding: 5px;
   background-color: white;
   margin: 0;
-  width: 84%;
+  width: 83%;
+}
+@media screen and (max-width: 540px) {
+  .main-content .tags {
+    width: 100%;
+  }
 }
 .main-content .tags .tag {
   width: auto;

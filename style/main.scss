@@ -194,7 +194,11 @@ body {
     padding: 5px;
     background-color: color.$white;
     margin: 0;
-    width: 84%;
+    width: 83%;
+
+    @media screen and (max-width: size.$reponsive-point) {
+      width: 100%;
+    }
 
     .tag {
       @include icon.icon(auto, auto, true, $hover-background-color: color.$lightGray) {
