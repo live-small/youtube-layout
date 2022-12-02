@@ -1,5 +1,4 @@
-@use 'mixins/header-icon' as icon;
-@use 'mixins/button.scss' as btn;
+@use 'mixins/icon.scss' as icon;
 @use 'mixins/image.scss' as img;
 @use 'mixins/text-ellipsis.scss' as text;
 @use 'color.scss' as color;
@@ -45,13 +44,13 @@ body {
   }
 
   .youtube-logo {
-    @include icon.header-icon($width: 100px, $height: auto, $hasHover: false) {
+    @include icon.icon($width: 100px, $height: auto, $hasHover: false) {
       margin-left: 7px;
     }
   }
 
   .header-icon {
-    @include icon.header-icon($hasHover: true, $radius: 50%) {
+    @include icon.icon($hasHover: true, $hover-radius: 50%) {
       padding: 5px;
     }
   }
@@ -79,14 +78,24 @@ body {
   }
 
   .search-button {
-    @include btn.button(0 40px 40px 0) {
+    @include icon.icon(auto, auto, true) {
+      border-radius: 0 40px 40px 0;
       border: none;
     }
 
     .search-image {
-      @include icon.header-icon($hasHover: false) {
+      @include icon.icon($hasHover: false) {
         padding: 0 5px;
       }
+    }
+  }
+
+  .voice-search-button {
+    @include icon.icon($hasHover: true, $hover-radius: 50%) {
+      padding: 5px;
+      margin-left: 10px;
+      background-color: lighten(black, 95%);
+      border-radius: 50%;
     }
   }
 
@@ -140,6 +149,17 @@ body {
   }
 
   .menu {
+    @include icon.icon(auto, auto, true, $hover-radius: 10px) {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 3px 0;
+
+      .nav-title {
+        @include text.ellipsis();
+      }
+    }
+
     .nav-image {
       width: 24px;
       margin: 5px 10px;
@@ -148,17 +168,6 @@ body {
     .profile-image {
       @include img.image(35px, 35px, true) {
         margin: 5px 10px;
-      }
-    }
-
-    @include btn.button(10px) {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      padding: 3px 0;
-
-      .nav-title {
-        @include text.ellipsis();
       }
     }
   }
@@ -188,7 +197,7 @@ body {
     width: 84%;
 
     .tag {
-      @include icon.header-icon(auto, auto, true, $background-color: color.$lightGray) {
+      @include icon.icon(auto, auto, true, $hover-background-color: color.$lightGray) {
         font-size: 14px;
         list-style: none;
         border-radius: 6px;
@@ -252,7 +261,7 @@ body {
       align-items: flex-start;
 
       .icon {
-        @include icon.header-icon($hasHover: false) {
+        @include icon.icon($hasHover: false) {
           visibility: hidden;
           align-self: flex-start;
         }

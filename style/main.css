@@ -71,8 +71,10 @@ body {
   outline: none;
 }
 .header .search-button {
-  border-radius: 0 40px 40px 0;
+  width: auto;
+  height: auto;
   cursor: pointer;
+  border-radius: 0 40px 40px 0;
   border: none;
 }
 .header .search-button:hover {
@@ -83,6 +85,19 @@ body {
   height: 1.5rem;
   cursor: pointer;
   padding: 0 5px;
+}
+.header .voice-search-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+.header .voice-search-button:hover {
+  background-color: #e6e6e6;
+  border-radius: 50%;
 }
 .header .small-size {
   display: none;
@@ -133,12 +148,22 @@ body {
   padding: 5px 10px 5px 10px;
 }
 .navigation .menu {
-  border-radius: 10px;
+  width: auto;
+  height: auto;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 14px;
   padding: 3px 0;
+}
+.navigation .menu .nav-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.navigation .menu:hover {
+  background-color: #e6e6e6;
+  border-radius: 10px;
 }
 .navigation .menu .nav-image {
   width: 24px;
@@ -150,14 +175,6 @@ body {
   cursor: pointer;
   margin: 5px 10px;
   border-radius: 50%;
-}
-.navigation .menu .nav-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.navigation .menu:hover {
-  background-color: #e6e6e6;
 }
 .navigation .footer {
   padding: 20px 10px;

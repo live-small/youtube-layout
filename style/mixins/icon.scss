@@ -1,9 +1,9 @@
-@mixin header-icon(
+@mixin icon(
   $width: 1.5rem,
   $height: 1.5rem,
   $hasHover: true,
-  $radius: null,
-  $background-color: lighten(black, 90%)
+  $hover-radius: null,
+  $hover-background-color: lighten(black, 90%)
 ) {
   width: $width;
   height: $height;
@@ -12,8 +12,8 @@
 
   @if ($hasHover) {
     &:hover {
-      background-color: $background-color;
-      border-radius: $radius;
+      background-color: $hover-background-color;
+      border-radius: $hover-radius;
     }
   }
 }
