@@ -17,6 +17,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   height: 56px;
   padding: 0 16px;
   display: flex;
@@ -125,7 +126,7 @@ body {
   width: 15%;
   height: calc(100vh - 56px);
   overflow-y: auto;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   position: fixed;
   left: 0;
 }
@@ -197,7 +198,8 @@ body {
   padding: 5px;
   background-color: white;
   margin: 0;
-  width: 83%;
+  width: 82%;
+  z-index: 1;
 }
 @media screen and (max-width: 540px) {
   .main-content .tags {
@@ -221,14 +223,16 @@ body {
 .main-content .video-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 47px;
 }
 .main-content .video {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  min-width: 120px;
   flex: 1 1 270px;
+  min-width: 120px;
+  max-width: 500px;
   padding: 5px 16px 30px 16px;
 }
 .main-content .video:hover .content .icon {
@@ -248,9 +252,13 @@ body {
   border-radius: 50%;
 }
 .main-content .video .asset {
+  position: relative;
   margin-bottom: 10px;
 }
 .main-content .video .running-time {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
   background-color: black;
   font-size: 12px;
   padding: 3px;
